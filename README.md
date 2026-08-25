@@ -35,7 +35,7 @@
 | `company_id` | Идентификатор компании пользователя |
 | `language` | Язык пользователя |
 | `activated_at` | Дата активации аккаунта; может быть пустой |
-| `state` | Состояние аккаунта: например, `active` или `pending` |
+| `state` | Состояние аккаунта: `active` или `pending` |
 
 ### `events.csv`
 
@@ -57,7 +57,7 @@
 | --- | --- |
 | `user_id` | Пользователь, которому относится событие |
 | `occurred_at` | Дата и время события |
-| `action` | Действие: `sent_weekly_digest`, `email_open` или `email_clickthrough` |
+| `action` | Действие: `sent_weekly_digest`, `sent_reengagement_email`, `email_open` или `email_clickthrough` |
 | `user_type` | Тип пользователя |
 
 ### `experiments.csv`
@@ -66,8 +66,8 @@
 | --- | --- |
 | `user_id` | Участник эксперимента |
 | `occurred_at` | Дата и время записи об эксперименте |
-| `experiment` | Название эксперимента |
-| `experiment_group` | Экспериментальная группа |
+| `experiment` | Название эксперимента; в текущем наборе данных — `publisher_update` |
+| `experiment_group` | Группа эксперимента: `control_group` или `test_group` |
 | `location` | Страна пользователя |
 | `device` | Устройство пользователя |
 | `user_type` | Тип пользователя |
